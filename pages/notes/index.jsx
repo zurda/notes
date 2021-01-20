@@ -1,1 +1,3 @@
-export default () => <h1>Notes</h1>
+const Notes = () => <h1>Notes</h1>
+
+export default Notes;

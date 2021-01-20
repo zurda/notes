@@ -1,1 +1,3 @@
-export default () => <h1>Index Page</h1>
+const IndexPage = () => <h1>Index Page</h1>
+
+export default IndexPage
