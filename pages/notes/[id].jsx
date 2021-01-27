@@ -1,18 +1,15 @@
-import React from 'react'
+/** @jsxRuntime classic /
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 const Note = () => {
   const router = useRouter()
   const { id }= router.query
 
   return (
-    <div>
+    <div sx={{variant: 'containers.page'}}>
       <h1>Note: {id} </h1>
-
-      <Link href="/notes">
-        <a>Notes</a>
-      </Link>
     </div>
   )
 }

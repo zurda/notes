@@ -1,23 +1,16 @@
-import React from 'react'
-import Link from 'next/link'
+/** @jsxRuntime classic /
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 
 const Page = () => {
   const notes = new Array(15).fill(1).map((e, i) => ({id: i, title: `Note: ${i}`}))
 
   return (
-    <div>
-      <h1>Notes</h1>
-
-      {notes.map(note => (
-        <div key={note.id}>
-          <Link key={note.id} href="/notes/[id]" as={`/notes/${note.id}`}>
-            <a>
-              <strong>{note.title}</strong>
-            </a>
-          </Link>
+      <div sx={{ height: `calc(100vh - 600px)`}}>
+        <div sx={{variant: 'containers.page', display: 'flex', alignItems: 'center', height: '100%'}}>
+          <h1 sx={{fontSize: 8, my: 0}}>Note Next</h1>
         </div>
-      ))}
-    </div>
+      </div> 
   )
 }
 
