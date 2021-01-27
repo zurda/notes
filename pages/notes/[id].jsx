@@ -1,11 +1,19 @@
+import React from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 const Note = () => {
   const router = useRouter()
   const { id }= router.query
 
   return (
-    <h1>Note: {id} </h1>
+    <div>
+      <h1>Note: {id} </h1>
+
+      <Link href="/notes">
+        <a>Notes</a>
+      </Link>
+    </div>
   )
 }
 
