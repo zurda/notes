@@ -13,6 +13,16 @@ const Nav = () => (
       <Link href="/notes">
         <a sx={{color: 'text', fontSize: 3, cursor: 'pointer'}}>notes</a>
       </Link>
+      <a sx={{
+        color: 'text',
+        fontSize: 3,
+        cursor: 'pointer',
+        textDecoration: 'none',
+      }}
+      href={process.env.PORTFOLIO_URL}
+    >
+      Portfolio
+    </a>
 
     </nav>
   </header>
