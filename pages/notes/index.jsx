@@ -3,9 +3,10 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import Link from 'next/link'
+import Label from '../../src/components/label'
 
 const Notes = () => {
-  const notes = new Array(15).fill(1).map((e, i) => ({id: i, title: `This is my note ${i}`}))
+  const notes = new Array(15).fill(1).map((e, i) => ({id: i, title: `This is my note ${i}`, label: `coding`}))
 
   return (
     <div sx={{variant: 'containers.page'}}>
@@ -18,6 +19,7 @@ const Notes = () => {
               <a sx={{textDecoration: 'none', cursor: 'pointer'}}>
                 <div sx={{variant: 'containers.card',}}>
                   <strong>{note.title}</strong>
+                  <Label labelText={ note.label } />
                 </div>
               </a>
             </Link>
